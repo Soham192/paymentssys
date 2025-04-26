@@ -14,13 +14,15 @@ public class Userservice {
         return userRepository.save(newuser);}
 //to validate if user is alreay present
     public User authenticate_User(String email ,String password){
-        Optional<User> user = userRepository.findByemail(email);
+        Optional<User> user = userRepository.findByemail(email);//to avoid null values
         //if email is found can register as a user and if not found return user not found 
         if(user.isPresent()&&user.get().getpassword().equals(password)){//user.ispresent a method of Optional conatiner obejct
             return user.get();
 
 
         }else{
+            throw new RuntimeException("invalid credentials");
+
 
         }
     }
