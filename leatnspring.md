@@ -21,3 +21,26 @@ orElseThrow(): Throws an exception if the value is not present.
 1.ResponseEntity?
 it is a spring boot class 
 it wraps an http response and send it ,meaning it sends data,status codes and  response headers(optional)
+<?> this is the flexible return type which means the response could be  anything
+
+2.What really is an http request?
+It is a meesage sent by the client(browser/app/form) to the server 
+now the structure of http is quite an interesting part but not relevant to the current trajctory so we will 
+delve into it later
+
+@RequestBody
+what this annotation does it converts the incoming json body in the http request to java object 
+this JSON body is just text at first.
+But your Java method needs to work with real Java objects (like a Person class).
+
+So frameworks (like Spring Boot) automatically convert (deserialize) the JSON into a Java object for you.
+
+29/4/25
+The LoginRequest class is not the same as your User class.
+It's a DTO (Data Transfer Object) used only for login. You are not setting the user's password here permanently — you're just receiving the credentials temporarily for authentication.
+
+String token = authService.login(loginRequest)//what does loginRequest here mean
+
+@PostMapping("/login") is a Spring Boot annotation that maps an HTTP POST request to a method in your controller.
+
+many things are based on how a http request is structured in json format
