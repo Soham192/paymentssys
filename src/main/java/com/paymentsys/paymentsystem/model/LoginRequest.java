@@ -1,8 +1,11 @@
-package com.paymentsys.model;
+package com.paymentsys.paymentsystem.model;
 
 public class LoginRequest {
     private String username;
     private String password;
+    public LoginRequest(){
+        
+    }
 
     public String getUsername(){//getter methods dont have any parameters
         return username;

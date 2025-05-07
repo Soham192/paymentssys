@@ -123,4 +123,47 @@ It is a method in simple terms from the jjwt library in java used to make jwt(i.
 now also a concept often used in this is method chaining(refer above)[1]
 
 what is compact serialisation?
+    is a
+
+1/5/25
+What is a no argument constructor and how does it differ from an empty constructor?
+it isoften needed for frameworks and if any constructor is not defined at all java automatically assigns but the catch is there needs to be no constructor defined at all or it will throw an error
+
+3/5/25
+what exactly are .config files?
+We are aware of the genreal definition that they are used to define settings but what do they exactly do 
+and work
+Config files like .json, .yaml, .env are usually not compiled. They're read at runtime or during build steps.
+wrt java .properties and .xml files are loaded into memory by classes
+ the .properties use key value format syntax
+
+
+how is package different from a library?
+think of lib as a toolbox and package as a tool
+java.util //lib
+java.util.concurrent //pac
+
+private final String SECRET_KEY ;//this didnt worked
+private  String SECRET_KEY ;//this worked why?
+to understand we need to the understand final as it a keyword used the value cannot be changed after intial assignment
+
+private final  String SECRET_KEY ;
+    Authservice (String SECRET_KEY){
+        this.SECRET_KEY=SECRET_KEY;
+    }//can this also be done
+    
+
+
+
+
+
+
+
+
+
+
+
+
+What is a wildcard?
+
 

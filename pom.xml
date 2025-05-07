@@ -41,16 +41,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
-    <!-- Spring Boot Starter for testing -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
+		
 
     <!-- Spring Boot Starter for Data JPA to work with databases -->
     <dependency>

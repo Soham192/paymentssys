@@ -44,3 +44,24 @@ String token = authService.login(loginRequest)//what does loginRequest here mean
 @PostMapping("/login") is a Spring Boot annotation that maps an HTTP POST request to a method in your controller.
 
 many things are based on how a http request is structured in json format
+
+
+3/5/25
+Where is the data stored in Jpa repo is a question that arises
+what is hibernate
+what is an in-memory database like H2, ?
+:-so I just want to build the backend logic first then I can use H2 which automatically builds the db in ram and isnt saved and
+can be used for devlopment and testing  
+to need this I need to config applications.properties
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+
+.properties files use a simple key-value format, not a programming language — they are configuration files, similar to .env files in other stacks.
+
+We need to understand what bean is//this related to dependency injection
+a bean is an object 
+what is dependency injection,IOC,J2EE
