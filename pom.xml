@@ -53,12 +53,11 @@
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- Jakarta Persistence (required for JPA in Spring Boot) -->
-    <dependency>
-        <groupId>jakarta.persistence</groupId>
-        <artifactId>jakarta.persistence-api</artifactId>
-        <version>3.1.0</version> <!-- You can adjust the version if necessary -->
-    </dependency>
+	<!-- Jakarta Persistence (required for JPA in Spring Boot) -->
+	<dependency>
+		<groupId>jakarta.persistence</groupId>
+		<artifactId>jakarta.persistence-api</artifactId>
+	</dependency>
 
     <!-- H2 Database for development (you can replace this with another database like MySQL or PostgreSQL) -->
     <dependency>

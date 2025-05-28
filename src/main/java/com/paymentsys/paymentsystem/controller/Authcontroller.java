@@ -11,18 +11,17 @@ import com.paymentsys.paymentsystem.model.LoginRequest;
 import com.paymentsys.paymentsystem.model.SigninRequest;
 import com.paymentsys.paymentsystem.service.Authservice;
 
-@RestController
+@RestController//t combines two important annotations:
 @RequestMapping("/")
 public class Authcontroller {
-    private final Authservice authService ;//final is used
-    public Authcontroller (Authservice authService){
+    private final Authservice authService ;//final is used ,this was a declaring variable authService of type Authservice
+    public Authcontroller (Authservice authService){//Constructor injection
         this.authService = authService;
     }
      
 
-    @PostMapping("/signup")
+    @PostMapping("/signup")//specialized version of requestmapping only fr post methods
     public String signup (@RequestBody SigninRequest signinRequest){
-        //now how do I store this into jpa repo,thats the work of service
         return authService.signup(signinRequest);   
     }
 

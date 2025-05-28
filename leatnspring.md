@@ -26,7 +26,7 @@ it wraps an http response and send it ,meaning it sends data,status codes and  r
 2.What really is an http request?
 It is a meesage sent by the client(browser/app/form) to the server 
 now the structure of http is quite an interesting part but not relevant to the current trajctory so we will 
-delve into it later
+delve into it later(it is in json format)
 
 @RequestBody
 what this annotation does it converts the incoming json body in the http request to java object 

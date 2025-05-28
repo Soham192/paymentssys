@@ -12,3 +12,7 @@ To push or pull again, you'd need to specify the branch explicitly,
 git branch//command to show the current branch by an asterix next to it
 
 git branch//to check the current branch
+
+git add .
+git commit -m ""
+git push -u origin 'branch name'

@@ -61,7 +61,7 @@ String jwt = builder.compact();
 26/4/25
 
 1.methods are first defined in class files with the syntax access_modifier type/return type method_name(parameters),although
-the return types specifically doesnt have to be a pre declared class,if it is the return type must match the object's class
+the return types specifically doesnt have to be a pre declared class,if it is the return type then it must match the object's class
 It could also be primitive data types like int,float,double,char,boolean
 and if we dont return anything we use void
 there is an exception for getter methods where we dont write parameters,why?
@@ -151,19 +151,17 @@ private final  String SECRET_KEY ;
     Authservice (String SECRET_KEY){
         this.SECRET_KEY=SECRET_KEY;
     }//can this also be done
-    
-
-
-
-
-
-
-
-
-
-
-
 
 What is a wildcard?
+
+what is the purpose of authservice
+
+what is <> in java ?
+they are called generics are are used to deifne the class,method,interface type
+
+
+29/5/25
+
+
 
 

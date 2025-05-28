@@ -6,11 +6,12 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.paymentsys.paymentsystem.model.SigninRequest;
 import com.paymentsys.paymentsystem.model.User;
 
 @Repository
 
-public interface UserRepository extends JpaRepository<User,Long> {//inheritance
+public interface UserRepository extends JpaRepository<SigninRequest,Long> {//inheritance
     Optional<User> findByemail(String email);//optional is part of javautil library and?
     Optional<User> findByusername(String username);
 //findByemail

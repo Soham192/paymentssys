@@ -19,13 +19,23 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class Authservice {
     @Value("${jwt.secret}")
-    private final  String SECRET_KEY ;
-    Authservice (String SECRET_KEY){
-        this.SECRET_KEY=SECRET_KEY;
+    private String SECRET_KEY; // Removed 'final' because Spring will inject the value
+    
+    // Correct Constructor
+    public Authservice() {
+        // No need to set SECRET_KEY here, it will be injected automatically by Spring
     }
+
+    public String getSecretKey() {
+        return SECRET_KEY;
+    }
+    
+
+    
+   
     @Autowired //dependency injection
     private UserRepository userRepository;
-    public User registerUser(User newuser){
+    public SigninRequest registerUser(SigninRequest newuser){
         return userRepository.save(newuser);}
 //to validate if user is alreay present
   /*  public User authenticate_User(String email ,String password){
@@ -42,7 +52,7 @@ public class Authservice {
     public String login(LoginRequest request) {//this login method is a different one then from authcontroller due to different types
         // You'd normally check username/password against DB here
         if ("admin".equals(request.getUsername()) && "password".equals(request.getPassword())) {
-
+//what is admin here
             return Jwts.builder()
                     .setSubject(request.getUsername())
                     .setIssuedAt(new Date())
@@ -55,19 +65,23 @@ public class Authservice {
         }
     }
 
-            //Cannot make a static reference to the non-static method getUsername() from the type LoginRequest
+            //Cannot make a static reference to the non-static method getUsernamerom the type LoginRequest
 
 
 
     public String signup(SigninRequest sig){
-        Optional<User> existingbyEmal = userRepository.findByemail(sig.getEmail());
+        Optional<SiginRequest> existingbyEmal = userRepository.findByemail(sig.getEmail());
         Optional<User> existingbyUsernam = userRepository.findByusername(sig.getUsername());  
+        Optional<SigninRequest> user = signinRequestRepository.findById(1L);
+if (user.isPresent()) {
+    System.out.println("User ID: " + user.get().getId());
+}
 
         if(existingbyEmal.isPresent()|| existingbyUsernam.isPresent())//isPresent is a method of the Optional class of utill library
         {
             return "User has already registered";
         }
-        User user = new User();
+        SigninRequest user = new SigninRequest();//new is used to intialize the user in the sigin class
         user.setEmail(sig.getEmail());
         user.setUsername(sig.getUsername());
         user.setPassword(sig.getPassword()); 
