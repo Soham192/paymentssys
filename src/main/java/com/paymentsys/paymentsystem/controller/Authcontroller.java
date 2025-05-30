@@ -22,8 +22,8 @@ public class Authcontroller {
 
     @PostMapping("/signup")//specialized version of requestmapping only fr post methods
     public String signup (@RequestBody SigninRequest signinRequest){
-        return authService.signup(signinRequest);   
-    }
+        return authService.signup(signinRequest); // 
+    }   
 
     @PostMapping("/login")
     public ResponseEntity<?> login (@RequestBody LoginRequest loginRequest){//this login method is a different one then from authservice due to different types

@@ -162,6 +162,33 @@ they are called generics are are used to deifne the class,method,interface type
 
 29/5/25
 
+private UserRepository userRepository;//even if we have imported UserRepository in Authservice why do we write this line
+what this essentially does it tell the compiler where the class files exist 
+We declare a member variable 
+we do it because of dependency injection and IOC
+ To enable this, frameworks use abstractions with additional behavior built in. If we want to add our own behavior, we need to extend the classes of the framework or plugin our own classes.//IOC
 
 
+ 2.Quite complex why we use interface here 
+ public interface UserRepository extends JpaRepository<SigninRequest,Long> {//inheritance
+    Optional<SigninRequest> findByemail(String email);//optional is part of javautil library and?
+    Optional<SigninRequest> findByusername(String username);
+what it does is,it allows us to use methods without their body?what do we mean by this
+We use an interface for UserRepository so that Spring can automatically generate the actual implementation for you, saving you from writing boilerplate code.
+
+30/5/25
+what are container object?
+These are classes that contain groups of objects:
+    List, Set, Map, Queue, etc.
+
+with what layers are conatiners made abstarct?
+
+NUll pointer
+a NullPointerException (NPE) is Java’s way of signaling an error to avoid unpredictable behavior or crashes.
+what Optional does is avoid null pointer exception and throws NoSuchElementException 
+
+what is a non static method and why cant it be referenced from a static context?
+
+getEmail() is a non-static method → it belongs to an object, not the class.
+You need an instance because non-static methods work on object-specific data (like a user's email). The class itself is just a template — it holds no actual data.
 

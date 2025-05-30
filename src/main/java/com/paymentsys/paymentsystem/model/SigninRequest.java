@@ -1,6 +1,7 @@
 package com.paymentsys.paymentsystem.model;
 
 public class SigninRequest {
+    
     private String username;//write this go where final was written to understand it
     private String password;
     private String email;
